@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_fragment_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="ah.hathi.simpleweather.WeatherActivity$PlaceholderFragment">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/niv_location_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:layout_gravity="top"
+        android:alpha=".45"
+        android:scaleType="centerCrop" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_no_city_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_no_cities_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addLocationMain"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_no_cities_main"
+                android:layout_alignTop="@id/tv_no_cities_main"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/tv_no_cities_main"
+                android:src="@drawable/ic_location_city_white_18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_city_data"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/tv_city_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_updated_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_city_field"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="14sp" />
+
+
+            />
+            <!--    android:scaleType="centerCrop"-->
+
+            <!-- <TextView
+                 android:id="@+id/tv_weather_icon"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:layout_centerHorizontal="true"
+                 android:textAppearance="?android:attr/textAppearanceLarge"
+                 android:textSize="70sp"
+                 />-->
+
+            <TextView
+                android:id="@+id/tv_current_temperature_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:elevation="14.5sp"
+                style="@style/temperatureStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_current_temperature_field"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/tv_current_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:typeface="normal"
+                    android:textSize="30sp" />
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/niv_weather_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/tv_current_description"
+
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_details_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:typeface="normal" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

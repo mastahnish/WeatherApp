@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefs">
+
+    <PreferenceCategory
+        android:key="pref_about"
+        android:title="About app">
+
+        <Preference
+            android:enabled="true"
+            android:key="pref_licenses"
+            android:title="@string/opensourceLicenses" />
+
+        <Preference
+            android:key="pref_info"
+            android:summary="Taken advantage of OpenWeatherMapAPI and PanoramioAPI"
+            android:title="@string/info">
+
+        </Preference>
+        <com.myos.simpleweatherforecast.VersionPreference android:title="@string/prefVersion" />
+    </PreferenceCategory>
+</PreferenceScreen>
