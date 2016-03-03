@@ -7,6 +7,8 @@
 
     tools:context="ah.hathi.simpleweather.WeatherActivity$PlaceholderFragment">
 
+
+
     <com.android.volley.toolbox.NetworkImageView
         android:id="@+id/niv_location_photo"
         android:layout_width="fill_parent"
@@ -35,8 +37,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/addLocationMain"
-                android:textSize="18sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -63,8 +65,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_updated_field"
@@ -91,12 +93,12 @@
 
             <TextView
                 android:id="@+id/tv_current_temperature_field"
+                style="@style/temperatureStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:elevation="14.5sp"
-                style="@style/temperatureStyle"/>
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -110,8 +112,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:typeface="normal"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    android:typeface="normal" />
 
                 <com.android.volley.toolbox.NetworkImageView
                     android:id="@+id/niv_weather_icon"
@@ -134,4 +136,15 @@
                 android:typeface="normal" />
         </RelativeLayout>
     </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_fragment_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 </FrameLayout>
